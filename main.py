@@ -1,16 +1,24 @@
-# This is a sample Python script.
-
-# Press ⌃F5 to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press F9 to toggle the breakpoint.
+from kivy.app import App
+from kivy.uix.button import Button
+from kivy.uix.label import Label
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.gridlayout import GridLayout
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+class ChessAI(App):
+    def build(self):
+        # Outer BoxLayout (Vertical orientation)
+        outer_layout = BoxLayout(orientation='horizontal')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+        # First inner BoxLayout (Horizontal orientation)
+        inner_layout_1 = GridLayout(rows=8,cols=8)
+        inner_layout_1.add_widget(Button(text="Button 1"))
+        inner_layout_1.add_widget(Button(text="Button 2"))
+
+        return outer_layout
+if __name__ == "__main__":
+    ChessAI().run()
+
+
+
+
