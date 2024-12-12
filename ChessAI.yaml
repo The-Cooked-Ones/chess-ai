@@ -1,6 +1,7 @@
-BoxLayout:
-    orientation: 'horizontal'
+ChessAI:
+    BoxLayout:
+        orientation: 'vertical'
 
-    GridLayout:
-        Button:
-            text: 'Button 1'
+        GridLayout:
+            rows: 8
+            cols: 8
