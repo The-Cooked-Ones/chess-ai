@@ -3,6 +3,7 @@ from kivy.uix.button import Button
 from kivy.uix.label import Label
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.gridlayout import GridLayout
+from chessboard import ChessBoard
 import yaml
 
 # Load the yamls
@@ -13,7 +14,7 @@ class ChessAI(App):
     def build(self):
         # Outer BoxLayout (Horizontal orientation)
         outer_layout = BoxLayout(orientation='vertical')  # Changed to 'vertical' for better stacking of widgets
-
+        chessBoard = ChessBoard()
         outer_layout.add_widget(chessBoard)
 
         return outer_layout
